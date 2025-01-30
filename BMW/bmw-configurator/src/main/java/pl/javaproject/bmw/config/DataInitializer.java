@@ -48,5 +48,6 @@ public class DataInitializer {
         x5.setBasePrice(350000);
         x5.setEngine(benzyna);
         carModelRepository.save(x5);
+
     }
 }

@@ -45,8 +45,17 @@
       </select>
       <span class="error" th:if="${#fields.hasErrors('engine')}" th:errors="*{engine}"></span>
     </div>
+    <div class="form-group">
+      <label>Numer telefonu:</label>
+      <input type="tel" th:field="*{phoneNumber}"
+             pattern="^\+?[0-9\s-]{9,}$"
+             placeholder="+48 123 456 789"
+             required>
+      <span class="error" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
+    </div>
     <button type="submit" class="button">Dodaj</button>
   </form>
+  <a th:href="@{/cars}" class="back-link">← Powrót do listy</a>
 </div>
 </body>
 </html>

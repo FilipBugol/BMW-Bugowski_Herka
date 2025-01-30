@@ -25,6 +25,10 @@ public class CarModel {
     @JoinColumn(name = "engine_id")
     private Engine engine;
 
+    @Pattern(regexp = "^\\+?[0-9\\s-]{9,}$", message = "Nieprawidłowy format numeru telefonu")
+    private String phoneNumber;
+
+    // Gettery i settery
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
@@ -35,4 +39,6 @@ public class CarModel {
     public void setBasePrice(double basePrice) { this.basePrice = basePrice; }
     public Engine getEngine() { return engine; }
     public void setEngine(Engine engine) { this.engine = engine; }
+    public String getPhoneNumber() { return phoneNumber; }
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
 }
