@@ -1,0 +1,140 @@
+:root {
+    --bmw-blue: #0066b3;
+    --bmw-red: #ff0000;
+    --bmw-light-blue: #00a3e0;
+    --bmw-dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--bmw-dark);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--bmw-red);
+}
+
+.header h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.navbar {
+    background-color: var(--bmw-blue);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--bmw-red);
+}
+
+.car-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.car-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--bmw-light-blue);
+}
+
+.car-item h2 {
+    color: var(--bmw-dark);
+    margin-bottom: 0.5rem;
+}
+
+.car-item p {
+    color: #666;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--bmw-dark);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--bmw-light-blue);
+    outline: none;
+}
+
+.button {
+    background-color: var(--bmw-red);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #cc0000;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--bmw-blue);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: var(--bmw-red);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Modele BMW</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="header">
+    <h1>BMW M Power Ogłoszenia</h1>
+</div>
+
+<div class="navbar">
+    <a th:href="@{/cars}">Strona główna</a>
+    <a th:href="@{/cars/add}">Dodaj nowy model</a>
+</div>
+
+<div class="car-list">
+    <div class="car-item" th:each="car : ${cars}">
+        <h2 th:text="${car.name}"></h2>
+        <p>Rok produkcji: <span th:text="${car.productionYear}"></span></p>
+        <p>Cena: <span th:text="${car.basePrice}"></span> PLN</p>
+        <p>Silnik: <span th:text="${car.engine.type + ' (' + car.engine.power + ' KM)'}"></span></p>
+    </div>
+</div>
+</body>
+</html>
